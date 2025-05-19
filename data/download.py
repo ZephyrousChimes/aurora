@@ -18,5 +18,5 @@ def download_and_save(tickers, interval='1m', period='1d', output_dir=f"{os.path
     with tqdm_context():
         for ticker in tqdm(tickers, desc="Downloading data"):
             df = fetch_data(ticker, interval=interval, period=period)
-            file_path = output_path / f"{ticker}_{interval}_{period}.csv"
+            file_path = output_path / f"{ticker}.csv"
             df.to_csv(file_path, index=False)
