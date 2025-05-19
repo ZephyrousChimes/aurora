@@ -9,6 +9,11 @@ license = {text = "Apache-2.0"}
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "transformers (>=4.51.3,<5.0.0)",
+    "gluonts (>=0.16.1,<0.17.0)",
+    "ujson (>=5.10.0,<6.0.0)",
+    "yfinance (>=0.2.61,<0.3.0)",
+    "torch (>=2.7.0,<3.0.0)"
 ]
 
 
