@@ -1,0 +1,25 @@
+# Ignore all virtual environments
+.env
+.venv/
+env/
+venv/
+
+# Ignore typical Python artifacts
+*.py[cod]
+*.egg-info/
+*.log
+
+# Ignore test/cache/temp files
+.pytest_cache/
+*.cover
+coverage.*
+
+# Ignore VS Code config (if using VS Code)
+.vscode/
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# Keep versioned empty folders
+!data/processed/.gitkeep
+!notebooks/.gitkeep
