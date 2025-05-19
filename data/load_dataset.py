@@ -39,7 +39,7 @@ def load_dataset():
                 }
 
             train_data.append(make_entry(T - test_window))
-            val_data.append(make_entry(T - prediction_length))
+            val_data.append(make_entry(T - test_window + prediction_length))
             test_data.append(make_entry(T))  
 
     # Create Hugging Face DatasetDict
