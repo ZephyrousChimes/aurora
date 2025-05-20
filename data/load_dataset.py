@@ -22,8 +22,8 @@ def load_dataset():
             item_id = os.path.splitext(filename)[0]
             feat_static_cat = None # [hash(item_id) % 1000]
 
-            feat_dynamic_real = df[['Open', 'High', 'Low', 'Volume']].T.values
-            full_target = df['Close'].values
+            feat_dynamic_real = df[['Close', 'Open', 'High', 'Low', 'Volume']].T.values
+            full_target = df['log_return'].values
             full_dates = df['Date'].values
 
             T = len(full_target)
@@ -39,7 +39,7 @@ def load_dataset():
                 }
 
             train_data.append(make_entry(T - test_window))
-            val_data.append(make_entry(T - prediction_length))
+            val_data.append(make_entry(T - test_window + prediction_length))
             test_data.append(make_entry(T))  
 
     # Create Hugging Face DatasetDict

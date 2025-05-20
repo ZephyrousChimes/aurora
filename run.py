@@ -1,5 +1,6 @@
 import argparse
 from data import download_and_save, preprocess_and_save
+from src.train import train
 
 def main():
     parser = argparse.ArgumentParser(description="Run pipeline tasks")
@@ -39,7 +40,9 @@ def main():
         preprocess_and_save(raw_dir=args.raw_dir, output_dir=args.output_dir)
 
     elif args.command == "train":
-        print(f"[TODO] Training model with config: {args.config}")
+        print(f"[TODO] Training model")
+        train()
+
 
     elif args.command == "evaluate":
         print("[TODO] Evaluation logic")
