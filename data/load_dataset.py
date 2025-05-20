@@ -22,8 +22,8 @@ def load_dataset():
             item_id = os.path.splitext(filename)[0]
             feat_static_cat = None # [hash(item_id) % 1000]
 
-            feat_dynamic_real = df[['Open', 'High', 'Low', 'Volume']].T.values
-            full_target = df['Close'].values
+            feat_dynamic_real = df[['Close', 'Open', 'High', 'Low', 'Volume']].T.values
+            full_target = df['log_return'].values
             full_dates = df['Date'].values
 
             T = len(full_target)
