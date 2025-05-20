@@ -56,8 +56,7 @@ Cleans, aligns, and prepares the raw data for training.
 ### 🧠 Train Model
 
 ```bash
-poetry run python run.py train \
-    --config config/train.yaml
+poetry run python run.py train
 ```
 
 Trains Aurora's Informer-based architecture using parameters from a YAML config.
